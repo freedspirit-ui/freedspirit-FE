@@ -1,4 +1,3 @@
-
 import { FiTruck, FiRefreshCw, FiHeadphones, FiCreditCard } from "react-icons/fi";
 
 const features = [
@@ -11,14 +10,16 @@ const features = [
 const FeatureSection = () => {
   return (
     <section className="bg-gray-800 text-white py-10">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 space-x-6">
-        {features.map((feature) => (
-          <div key={feature.id} className="flex flex-col items-center text-center">
-            <div className="text-red-500">{feature.icon}</div>
-            <h3 className="text-lg font-bold mt-2">{feature.title}</h3>
-            <p className="text-gray-400 text-sm">{feature.subtitle}</p>
-          </div>
-        ))}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {features.map((feature) => (
+            <div key={feature.id} className="flex flex-col items-center">
+              <div className="text-red-500">{feature.icon}</div>
+              <h3 className="text-lg font-bold mt-2">{feature.title}</h3>
+              <p className="text-gray-400 text-sm">{feature.subtitle}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
