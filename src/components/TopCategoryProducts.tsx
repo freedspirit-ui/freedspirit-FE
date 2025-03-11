@@ -86,20 +86,28 @@ const TopCategoryProducts = () => {
           <Slider {...settings}>
             {products.map((product) => (
               <div key={product.id} className="px-2">
-               <div className="bg-gray-200 p-4 rounded-xl shadow-lg flex flex-col items-center text-center text-black w-full sm:w-[306px] h-auto sm:h-[344px] mx-auto">
+<div className="bg-gray-200 p-3 sm:p-4 rounded-xl shadow-lg flex flex-col items-center text-center text-black w-full max-w-[320px] sm:w-[306px] h-auto mx-auto">
+  
+  <img src={product.image} alt={product.name} className="w-32 sm:w-40 h-32 sm:h-40 object-contain mb-3 sm:mb-4" />
 
-                  <img src={product.image} alt={product.name} className="w-40 h-40 object-contain mb-4" />
-                  <h3 className="text-lg font-medium">{product.name}</h3>
-                  <div className="text-red-500 font-bold text-lg">{product.price}</div>
-                  <div className="text-gray-500 line-through">{product.oldPrice}</div>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, index) => (
-                      <span key={index} className={`text-yellow-400 text-xl ${index < product.rating ? "" : "opacity-30"}`}>
-                        ★
-                      </span>
-                    ))}
-                  </div>
-                </div>
+  <h3 className="text-base sm:text-lg font-medium">{product.name}</h3>
+
+  <div className="text-red-500 font-bold text-base sm:text-lg">{product.price}</div>
+  
+  {product.oldPrice && (
+    <div className="text-gray-500 line-through text-sm sm:text-base">{product.oldPrice}</div>
+  )}
+
+  <div className="flex justify-center mt-2">
+    {[...Array(5)].map((_, index) => (
+      <span key={index} className={`text-yellow-400 text-lg sm:text-xl ${index < product.rating ? "" : "opacity-30"}`}>
+        ★
+      </span>
+    ))}
+  </div>
+
+</div>
+
               </div>
             ))}
           </Slider>

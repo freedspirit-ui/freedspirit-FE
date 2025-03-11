@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import biker from "../assets/biker.png";
+import bikeRider from "../assets/bikeRider.png";
 import jacket from "../assets/jacket.png";
 import helmet from "../assets/helmet.png";
 
@@ -28,14 +28,17 @@ const HeroSection: React.FC = () => {
 
         {/* Biker Image - Absolutely Centered */}
         <div className="relative w-full flex justify-center items-center mt-6 md:mt-0">
-          <div className="relative w-48 sm:w-60 md:w-[450px] lg:w-[600px] xl:w-[700px] flex justify-center">
-            <img
-              src={biker}
-              alt="Motorbike Rider"
-              className="w-full mx-auto transform scale-x-[-1]"
-            />
-          </div>
-        </div>
+        <div className="relative w-48 sm:w-60 md:w-[450px] lg:w-[600px] xl:w-[700px] flex justify-center ml-[-3.5rem] sm:ml-0">
+  <img
+    src={bikeRider}
+    alt="Motorbike Rider"
+    className="w-full mx-auto"
+  />
+</div>
+
+</div>
+
+
       </div>
 
       {/* Categories */}

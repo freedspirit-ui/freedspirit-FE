@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Navigation Links */}
-      <div className="bg-slate-800 p-2 mt-4 md:flex md:justify-start">
+      <div className="bg-slate-800 pt-2 mt-4 md:flex md:justify-start pl-10 pb-2">
       <ul
         className={`flex flex-col md:flex-row md:space-x-10 text-lg font-medium ${
           menuOpen ? "block" : "hidden md:flex"
